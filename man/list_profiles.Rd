@@ -10,5 +10,5 @@ list_profiles()
 A character vector of RStudio profiles names.
 }
 \description{
-Find the names of all RStudio profiles and return as a character vector.
+List the current user's saved profiles.
 }

@@ -1,20 +1,25 @@
-Name: Create Profile
-Description: Create new profile from current global options
-Binding: createProfile
+Name: Save Profile
+Description: Save the current configuration as a profile
+Binding: save_profile_addin
 Interactive: true
 
-Name: Load Profile
-Description: Load global options from a saved profile
-Binding: loadProfile
+Name: Open Profile
+Description: Open a saved profile and apply its configuration
+Binding: open_profile_addin
 Interactive: true
 
-Name: Revert to Default Profile
-Description: Revert to the default global options
-Binding: defaultProfile
+Name: Default Profile
+Description: Revert to the default profile configuration
+Binding: default_profile_addin
 Interactive: true
 
 Name: List Profiles
-Description: List the current user's available profiles
-Binding: listProfiles
+Description: List the current user's saved profiles
+Binding: list_profiles_addin
 Interactive: false
+
+Name: Remove Profile
+Description: Remove a saved profile
+Binding: remove_profile_addin
+Interactive: true
 

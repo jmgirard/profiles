@@ -7,5 +7,5 @@
 default_profile()
 }
 \description{
-Revert to the default RStudio profile.
+Revert to the default profile configuration.
 }

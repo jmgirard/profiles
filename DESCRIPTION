@@ -1,18 +1,34 @@
-Package: profiles
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
-Encoding: UTF-8
-LazyData: true
-Imports: 
-    assertthat,
-    rjson,
-    rstudioapi
-RoxygenNote: 7.2.0
+Package: profiles
+Title: Create and Switch Between RStudio Profiles
+Version: 0.0.1.9000
+Authors@R: 
+    c(person(given = "Jeffrey", 
+             family = "Girard",
+             role = c("aut", "cre"),
+             email = "me@jmgirard.com", 
+             comment = c(ORCID = "0000-0002-7359-3746")))
+Description: Functions and RStudio addins for creating and quickly switching 
+    between RStudio "profiles," which contain user-specific preferences ranging 
+    from editor appearance to dictionaries and keybindings.
+License: MIT + file LICENSE
 URL: https://github.com/jmgirard/profiles
 BugReports: https://github.com/jmgirard/profiles/issues
+Imports: 
+    assertthat,
+    cli,
+    glue,
+    jsonlite,
+    lifecycle,
+    rlang,
+    rstudioapi,
+    withr
+Suggests: 
+    roxygen2,
+    spelling,
+    styler
+Encoding: UTF-8
+Language: en-US
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
