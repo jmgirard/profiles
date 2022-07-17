@@ -4,7 +4,10 @@
 \alias{list_profiles}
 \title{List Profiles Function}
 \usage{
-list_profiles()
+list_profiles(quiet = FALSE)
+}
+\arguments{
+\item{quiet}{A flag indicating whether to print profiles to console.}
 }
 \value{
 A character vector of RStudio profiles names.

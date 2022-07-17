@@ -22,15 +22,19 @@ remove_profile <- function(name, force = FALSE) {
   pdir <- file.path(cdir, glue("RStudio.{name}"))
 
   # Check if profile directory exists
-  if (!dir.exists(pdir)) stop(glue('Could not find profile: "{name}"'))
+  if (!dir.exists(pdir)) {
+    cli::cli_abort('Could not find profile: {name}')
+  }
 
   # Try to remove the profile directory
   status <- unlink(pdir, recursive = TRUE, force = force, expand = FALSE)
 
   # Check if file copy failed
-  if (status == 1) stop("Failed to remove one or more files")
+  if (status == 1) {
+    cli::cli_abort("Failed to remove one or more files")
+  }
 
-  message(glue('Removed profile: {name}'))
+  cli::cli_alert_success('Removed profile: {name}')
 }
 
 # ------------------------------------------------------------------------------

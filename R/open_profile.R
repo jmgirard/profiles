@@ -23,7 +23,7 @@ open_profile <- function(name) {
 
   # Check the profile directory exists
   if (dir.exists(pdir) == FALSE) {
-    stop(glue("Could not find profile: {name}"))
+    cli::cli_abort("Could not find profile: {name}")
   }
 
   # Try to copy the profile to the config directory
@@ -37,7 +37,7 @@ open_profile <- function(name) {
 
   # Check if file copy failed
   if (any(status == FALSE)) {
-    stop(glue("Could not copy files to: {pdir}"))
+    cli::cli_abort("Could not copy files to: {pdir}")
   }
 
   # Find the new profile's editor theme
@@ -50,7 +50,7 @@ open_profile <- function(name) {
   # Apply the new profile's editor theme
   rstudioapi::applyTheme(theme)
 
-  message(glue("Opened profile: {name}"))
+  cli::cli_alert_success("Opened profile: {name}")
 }
 
 # ------------------------------------------------------------------------------

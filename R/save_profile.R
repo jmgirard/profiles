@@ -28,7 +28,7 @@ save_profile <- function(name, overwrite = TRUE) {
 
     # Check if dir create failed
     if (any(status == FALSE)) {
-      stop(glue("Could not create folder: {newdir}"))
+      cli::cli_abort("Could not create folder: {newdir}")
     }
   }
 
@@ -41,9 +41,11 @@ save_profile <- function(name, overwrite = TRUE) {
   )
 
   # Check if file copy failed
-  if (any(status == FALSE)) stop(glue("Could not copy files to: {newdir}"))
+  if (any(status == FALSE)) {
+    cli::cli_abort("Could not copy files to: {newdir}")
+  }
 
-  message(glue("Saved profile: {name}"))
+  cli::cli_alert_success("Saved profile: {name}")
 }
 
 # ------------------------------------------------------------------------------

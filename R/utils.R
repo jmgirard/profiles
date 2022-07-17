@@ -18,7 +18,9 @@ clear_current_profile <- function() {
   )
 
   # Check if file remove failed
-  if (status == 1) stop("Could not clear the current profile")
+  if (status == 1) {
+    cli::cli_abort("Could not clear the current profile")
+  }
 
   status
 }
@@ -40,10 +42,10 @@ get_config_dir <- function() {
 
     # Check if config directory is still missing
     if (cdir == "") {
-      stop(glue(
-        'Could not find the config directory. Use Sys.setenv() to set the ',
-        '"RSTUDIO_CONFIG_HOME" or "APPDATA" properties.'
-      ))
+      cli::cli_abort(
+        c('Could not find the config directory. Use Sys.setenv() to set the ',
+        '"RSTUDIO_CONFIG_HOME" or "APPDATA" properties.')
+      )
     }
   }
 
