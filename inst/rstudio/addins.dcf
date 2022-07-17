@@ -1,0 +1,20 @@
+Name: Create Profile
+Description: Create new profile from current global options
+Binding: createProfile
+Interactive: true
+
+Name: Load Profile
+Description: Load global options from a saved profile
+Binding: loadProfile
+Interactive: true
+
+Name: Revert to Default Profile
+Description: Revert to the default global options
+Binding: defaultProfile
+Interactive: true
+
+Name: List Profiles
+Description: List the current user's available profiles
+Binding: listProfiles
+Interactive: false
+
