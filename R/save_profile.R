@@ -35,7 +35,7 @@ save_profile <- function(name, overwrite = TRUE) {
   # Try to copy the old profile to the new profile directory
   status <- file.copy(
     from = dir(olddir, full.names = TRUE),
-    to = pdir,
+    to = newdir,
     overwrite = overwrite,
     recursive = TRUE
   )
