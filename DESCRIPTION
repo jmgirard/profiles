@@ -1,16 +1,14 @@
 Type: Package
 Package: profiles
-Title: Create and Switch Between RStudio Profiles
+Title: Manage RStudio Config Profiles
 Version: 0.0.1.9000
 Authors@R: 
-    c(person(given = "Jeffrey", 
-             family = "Girard",
-             role = c("aut", "cre"),
-             email = "me@jmgirard.com", 
-             comment = c(ORCID = "0000-0002-7359-3746")))
-Description: Functions and RStudio addins for creating and quickly switching 
-    between RStudio "profiles," which contain user-specific preferences ranging 
-    from editor appearance to dictionaries and keybindings.
+    person("Jeffrey", "Girard", , "me@jmgirard.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-7359-3746"))
+Description: Functions and RStudio addins for creating and quickly
+    switching between RStudio "profiles," which contain user-specific
+    preferences ranging from editor appearance to dictionaries and
+    keybindings.
 License: MIT + file LICENSE
 URL: https://github.com/jmgirard/profiles
 BugReports: https://github.com/jmgirard/profiles/issues

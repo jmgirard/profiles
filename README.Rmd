@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # profiles
 
 <!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 The goal of \{profiles\} is to allow users to create and quickly switch between different RStudio "profiles." Profiles control various user preferences ranging from editor appearance (e.g., color theme, font, font size, zoom level, pane layout), dictionaries, and key bindings. This ability is particularly useful when different configurations would be useful at different times. For example, I use a heavily customized version of RStudio when doing my own coding; however, when teaching in R, I often want to revert back to the default configuration and increase the zoom level and font size. Using \{profiles\}, I can save profiles for `"working"` and `"teaching"` and swap between them with the click of a button.

@@ -4,7 +4,7 @@
 \name{profiles-package}
 \alias{profiles}
 \alias{profiles-package}
-\title{profiles: Create and Switch Between RStudio Profiles}
+\title{profiles: Manage RStudio Config Profiles}
 \description{
 Functions and RStudio addins for creating and quickly switching between RStudio "profiles," which contain user-specific preferences ranging from editor appearance to dictionaries and keybindings.
 }
