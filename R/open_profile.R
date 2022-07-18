@@ -40,17 +40,20 @@ open_profile <- function(name) {
     cli::cli_abort("Could not copy files to: {pdir}")
   }
 
+  #TODO: Figure out how to refresh font
+
   # Find the new profile's editor theme
-  prefs <- jsonlite::fromJSON(file.path(cdir, "RStudio", "rstudio-prefs.json"))
-  theme <- prefs$editor_theme
+  # prefs <- jsonlite::fromJSON(file.path(cdir, "RStudio", "rstudio-prefs.json"))
+  # theme <- prefs$editor_theme
 
-  # Check if editor theme is not explicitly set
-  if (is.null(theme)) theme <- "Textmate (default)"
-
-  # Apply the new profile's editor theme
-  rstudioapi::applyTheme(theme)
+  # # Check if editor theme is not explicitly set
+  # if (is.null(theme)) theme <- "Textmate (default)"
+  #
+  # # Apply the new profile's editor theme
+  # rstudioapi::applyTheme(theme)
 
   cli::cli_alert_success("Opened profile: {name}")
+  cli::cli_alert_info("Please restart RStudio to apply profile.")
 }
 
 # ------------------------------------------------------------------------------

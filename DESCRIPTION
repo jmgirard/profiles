@@ -16,7 +16,6 @@ Imports:
     assertthat,
     cli,
     glue,
-    jsonlite,
     lifecycle,
     rlang,
     rstudioapi

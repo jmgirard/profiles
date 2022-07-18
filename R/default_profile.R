@@ -11,10 +11,11 @@ default_profile <- function() {
   # Remove the current profile
   clear_current_profile()
 
-  # Apply the default editor theme
-  rstudioapi::applyTheme("Textmate (default)")
+  # # Apply the default editor theme
+  # rstudioapi::applyTheme("Textmate (default)")
 
   cli::cli_alert_success("Reverted to default profile")
+  cli::cli_alert_info("Please restart RStudio to apply profile.")
 }
 
 # ------------------------------------------------------------------------------
