@@ -14,8 +14,8 @@ default_profile <- function() {
   # # Apply the default editor theme
   # rstudioapi::applyTheme("Textmate (default)")
 
+  restart_rstudio()
   cli::cli_alert_success("Reverted to default profile")
-  cli::cli_alert_info("Please restart RStudio to apply profile.")
 }
 
 # ------------------------------------------------------------------------------

@@ -56,3 +56,31 @@ get_config_dir <- function() {
 
   cdir
 }
+
+# -------------------------------------------------------------------------
+
+# Restart RStudio
+restart_rstudio <- function() {
+  # Check if the user is not in RStudio
+  if (!rstudioapi::isAvailable()) {
+    return(FALSE)
+  }
+
+  # Check if the session is not interactive
+  if (!rlang::is_interactive()) {
+    return(FALSE)
+  }
+
+  # Check if no project is open in RStudio
+  if (is.null(rstudioapi::getActiveProject())) {
+    cli::cli_alert_info("Please restart RStudio to apply profile.")
+    return(FALSE)
+  }
+
+  # Prompt the user to confirm restart
+  if (!rstudioapi::showQuestion("Restart", "Restart RStudio?")) {
+    return(FALSE)
+  }
+
+  rstudioapi::openProject()
+}
