@@ -16,15 +16,15 @@ Imports:
     assertthat,
     cli,
     glue,
-    lifecycle,
     rlang,
     rstudioapi
 Suggests: 
     roxygen2,
     spelling,
-    styler
+    styler,
+    usethis
 Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1
